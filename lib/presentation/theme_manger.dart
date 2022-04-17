@@ -47,14 +47,51 @@ ThemeData getAppLocationTheme() {
     ),
     //TestTheme
     textTheme: TextTheme(
-        displayLarge:
-            getLightStyle(color: ColorManger.white, fontSize: FontSize.s22),
-        headline1: getSemiBoldStyle(
-            color: ColorManger.darkGrey, fontSize: FontSize.s16),
-        subtitle1: getMediumStyle(
-            color: ColorManger.lightGrey, fontSize: FontSize.s14),
-        caption: getRegularStyle(
-            color: ColorManger.darkGrey, fontSize: FontSize.s12),
-        bodyText1: getRegularStyle(color: ColorManger.grey)),
+      displayLarge:
+          getLightStyle(color: ColorManger.white, fontSize: FontSize.s22),
+      headline1:
+          getSemiBoldStyle(color: ColorManger.darkGrey, fontSize: FontSize.s16),
+      subtitle1:
+          getMediumStyle(color: ColorManger.lightGrey, fontSize: FontSize.s14),
+      caption:
+          getRegularStyle(color: ColorManger.darkGrey, fontSize: FontSize.s12),
+      bodyText1: getRegularStyle(color: ColorManger.grey),
+    ),
+    //input decoration theme (text form field )
+    inputDecorationTheme: InputDecorationTheme(
+      //content padding
+      contentPadding: const EdgeInsets.all(
+        AppPadding.p8,
+      ),
+      //hint style
+      hintStyle:
+          getRegularStyle(color: ColorManger.grey, fontSize: FontSize.s14),
+      //label style
+      labelStyle:
+          getMediumStyle(color: ColorManger.grey, fontSize: FontSize.s14),
+      //error style
+      errorStyle:
+          getRegularStyle(color: ColorManger.error, fontSize: FontSize.s14),
+      // enable border style
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: ColorManger.primary, width: AppSize.s1),
+        borderRadius: BorderRadius.circular(AppSize.s8),
+      ),
+      // focused border style
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: ColorManger.grey, width: AppSize.s1),
+        borderRadius: BorderRadius.circular(AppSize.s8),
+      ),
+      //error border
+      errorBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: ColorManger.error, width: AppSize.s1),
+        borderRadius: BorderRadius.circular(AppSize.s8),
+      ),
+      // focused error border
+      focusedErrorBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: ColorManger.primary, width: AppSize.s1),
+        borderRadius: BorderRadius.circular(AppSize.s8),
+      ),
+    ),
   );
 }
