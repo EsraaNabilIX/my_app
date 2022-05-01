@@ -18,6 +18,7 @@ class AppPadding {
 }
 
 class AppSize {
+  static const dynamic s0 = 0.0;
   static const dynamic s1 = 1.0;
   static const dynamic s2 = 2.0;
   static const dynamic s4 = 4.0;
@@ -29,4 +30,8 @@ class AppSize {
   static const dynamic s16 = 16.0;
   static const dynamic s18 = 18.0;
   static const dynamic s20 = 20.0;
+  static const dynamic s40 = 40.0;
+  static const dynamic s60 = 60.0;
+  static const dynamic s80 = 80.0;
+  static const dynamic s100 = 100.0;
 }

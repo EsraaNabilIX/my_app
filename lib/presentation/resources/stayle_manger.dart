@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/presentation/font_manger.dart';
+import 'package:my_app/presentation/resources/font_manger.dart';
 
 TextStyle _getTextStale(double fontSize, FontWeight fontWeight, Color color) {
   return TextStyle(

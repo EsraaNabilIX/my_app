@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/presentation/color_manger.dart';
-import 'package:my_app/presentation/font_manger.dart';
-import 'package:my_app/presentation/stayle_manger.dart';
-import 'package:my_app/presentation/values_manger.dart';
+import 'package:my_app/presentation/resources/color_manger.dart';
+import 'package:my_app/presentation/resources/font_manger.dart';
+import 'package:my_app/presentation/resources/stayle_manger.dart';
+import 'package:my_app/presentation/resources/values_manger.dart';
 
 ThemeData getAppLocationTheme() {
   return ThemeData(
@@ -20,8 +20,8 @@ ThemeData getAppLocationTheme() {
     //AppBar theme
     appBarTheme: AppBarTheme(
       centerTitle: true,
-      color: ColorManger.primary,
-      elevation: AppSize.s4,
+      color: ColorManger.white,
+      elevation: AppSize.s0,
       shadowColor: ColorManger.lightPrimary,
       titleTextStyle: getRegularStyle(
         color: ColorManger.white,
@@ -48,14 +48,16 @@ ThemeData getAppLocationTheme() {
     //TestTheme
     textTheme: TextTheme(
       displayLarge:
-          getLightStyle(color: ColorManger.white, fontSize: FontSize.s22),
-      headline1:
           getSemiBoldStyle(color: ColorManger.darkGrey, fontSize: FontSize.s16),
-      subtitle1:
-          getMediumStyle(color: ColorManger.lightGrey, fontSize: FontSize.s14),
-      caption:
+      headlineLarge:
+          getSemiBoldStyle(color: ColorManger.darkGrey, fontSize: FontSize.s16),
+      headlineMedium:
+          getRegularStyle(color: ColorManger.darkGrey, fontSize: FontSize.s14),
+      titleMedium:
+          getMediumStyle(color: ColorManger.primary, fontSize: FontSize.s14),
+      bodyLarge:
           getRegularStyle(color: ColorManger.darkGrey, fontSize: FontSize.s12),
-      bodyText1: getRegularStyle(color: ColorManger.grey),
+      bodySmall: getRegularStyle(color: ColorManger.grey),
     ),
     //input decoration theme (text form field )
     inputDecorationTheme: InputDecorationTheme(
