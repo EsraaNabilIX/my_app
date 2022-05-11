@@ -16,20 +16,9 @@ class OnBoardingView extends StatefulWidget {
 }
 
 class _OnBoardingViewState extends State<OnBoardingView> {
-  late final List<SliderObject> _list = _getSliderData();
   final PageController _pageController = PageController();
   int _currentIndex = 0;
 
-  List<SliderObject> _getSliderData() => [
-        SliderObject(AppStrings.onBoardingTitle1,
-            AppStrings.onBoardingSubTitle1, ImagesAssets.onBoardingLogo1),
-        SliderObject(AppStrings.onBoardingTitle2,
-            AppStrings.onBoardingSubTitle2, ImagesAssets.onBoardingLogo2),
-        SliderObject(AppStrings.onBoardingTitle3,
-            AppStrings.onBoardingSubTitle3, ImagesAssets.onBoardingLogo3),
-        SliderObject(AppStrings.onBoardingTitle4,
-            AppStrings.onBoardingSubTitle4, ImagesAssets.onBoardingLogo4),
-      ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -152,6 +141,12 @@ class _OnBoardingViewState extends State<OnBoardingView> {
       return SvgPicture.asset(ImagesAssets.solidCircle);
     }
   }
+
+  @override
+  void dispose() {
+    // TODO: viewModel.dispose() ;
+    super.dispose();
+  }
 }
 
 class OnBoardingPage extends StatelessWidget {
@@ -189,11 +184,4 @@ class OnBoardingPage extends StatelessWidget {
       ],
     );
   }
-}
-
-class SliderObject {
-  String title;
-  String subTitle;
-  String image;
-  SliderObject(this.title, this.subTitle, this.image);
 }
